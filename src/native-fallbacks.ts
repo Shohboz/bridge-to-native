@@ -94,7 +94,7 @@ export class NativeFallbacks {
         const paramsStr = params.toString();
 
         if (this.b2n.environment === 'ios') {
-            replaceUrl = `${this.b2n.iosAppId}:///dashboard/pdf_viewer?${paramsStr}`;
+            window.location.replace(`${this.b2n.iosAppId}:///dashboard/pdf_viewer?${paramsStr}`);
         }
 
         // У андройда через диплинк открывается, но предыдущий экран затирается.
