@@ -24,7 +24,8 @@
         "pub": "npm publish .publish --userconfig \"../.npmrc\" --tag \"$TAG\"",
         "format": "prettier --write \"./**/*.{ts,tsx,js,jsx,css,json}\"",
         "test": "jest --silent --collect-coverage",
-        "release": "yarn compile && npm version \"$VERSION\" --no-git-tag-version && yarn compile:copy-package-json && yarn pub"
+        "release": "yarn compile && npm version \"$VERSION\" --no-git-tag-version && yarn compile:copy-package-json && yarn pub",
+        "prepare": "yarn build"
     },
     "dependencies": {},
     "devDependencies": {
